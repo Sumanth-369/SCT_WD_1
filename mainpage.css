@@ -1,0 +1,87 @@
+body {
+  font-family: 'Arial', sans-serif;
+  padding-top: 70px; 
+}
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
+
+.navbar.scrolled {
+  background-color: #333 !important;
+  transition: background-color 0.5s ease;
+}
+
+.navbar.scrolled .nav-link {
+  color: white !important;
+}
+
+.hero {
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.hero .btn {
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+}
+
+#about {
+  padding: 60px 0;
+}
+
+#about h4 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+#categories {
+  padding: 60px 0;
+}
+
+#categories i {
+  color: #007bff;
+}
+
+#categories h4 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+
+#explore {
+  padding: 60px 0;
+}
+
+#contact {
+  padding: 60px 0;
+}
+
+form .form-control {
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #333;
+  color: white;
+}

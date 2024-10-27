@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mobile Store</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">MobileStore</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
+        <li class="nav-item"><a class="nav-link" href="#explore">Explore</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="home" class="hero mt-5 pt-4">
+  <div class="container text-center">
+    <h1>Welcome to Mobile Store</h1>
+    <p class="lead">Your one-stop shop for the latest smartphones and accessories!</p>
+    <a href="#about" class="btn btn-primary">Learn More</a>
+  </div>
+</section>
+
+  <section id="about" class="py-5 mt-4 text-center bg-light">
+    <div class="container">
+      <h2>About Mobile Phones</h2>
+      <p>Discover the latest mobile phones from leading brands.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <h4>iPhone 14 Pro</h4>
+          <p>Features a stunning display, A16 Bionic chip, and improved cameras.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Samsung Galaxy S23</h4>
+          <p>Top-tier performance, innovative features, and stunning design.</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Google Pixel 8</h4>
+          <p>AI-powered camera and fast performance in a sleek design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories" class="py-5  text-center">
+    <div class="container">
+      <h2>Mobile & Accessories Categories</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fas fa-mobile-alt fa-3x mb-4"></i>
+          <h4>Smartphones</h4>
+          <p>Latest smartphones with advanced features.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-headphones-alt fa-3x mb-4"></i>
+          <h4>Accessories</h4>
+          <p>Quality accessories for all types of phones.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-charging-station fa-3x mb-4"></i>
+          <h4>Chargers</h4>
+          <p>Fast charging solutions for every need.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="explore" class="py-5 bg-light text-center">
+    <div class="container">
+      <h2>Explore Our Products</h2>
+      <p>Browse through our extensive collection of phones and accessories.</p>
+      <a href="#categories" class="btn btn-primary">Browse Categories</a>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 text-center">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have any questions? Get in touch with us!</p>
+      <form>
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-4 bg-dark text-white text-center">
+    <p>&copy; 2024 MobileStore. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <script>
+$('a.nav-link').on('click', function(e) {
+  if (this.hash !== '') {
+    e.preventDefault();
+    const hash = this.hash;
+
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top - 70
+    }, 800);
+  }
+});
+
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 50) {
+    $('#navbar').addClass('scrolled');
+  } else {
+    $('#navbar').removeClass('scrolled');
+  }
+});
+</script>
+</body>
+</html>
